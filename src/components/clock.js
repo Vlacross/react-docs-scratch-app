@@ -1,23 +1,21 @@
-import React, { Fragment } from 'react';
-function Clock(props) {
+import React, { Component } from 'react';
 
-  const element = (
-    <div>
-      <h1>Tick funksh Element</h1>
-      <h3>It is {props.date.toLocaleTimeString()}.</h3>
-    </div>
-  )
+class Clock extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Tick funksh Element</h1>
+        <h3>It is {this.props.date.toLocaleTimeString()}.</h3>
+      </div>
+    );
+  }
 
-  return (
-    element
-  );
-
-}
+};
 
 export default function tick() {
  
   return (
-    <Clock date={new Date(0)} />
+    <Clock date={new Date()} />
   );
 }
 
