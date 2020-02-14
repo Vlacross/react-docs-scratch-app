@@ -35,3 +35,24 @@ export default class Clock extends Component {
   }
 
 };
+
+/*
+
+Basics of State:
+ >Initializing state with a new value needs to be run through reacts built in `setState` method to properly change and render the content
+  ex:
+    this.setState({
+      comment: "updated content"
+    })
+
+ >Trying to update state with an evaluation/expression will likely fail. In the case this kind of state updated is needed, you should pass setState a function.
+    ex:
+      this.setState((state, props) => ({
+        counter: state.counter + props.increment,
+      })
+      )
+  
+ >Data flows down - you can pass state/props down to child components, but you need a method (redux, hooks, context) to pass data back up the chain
+
+*/
+
