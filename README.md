@@ -26,4 +26,19 @@ Attempting to set up a react app from scratch by configuring alongside this guid
     run:
       npm install --save-dev webpack@4.19.1 webpack-cli@3.1.1 webpack-dev-server@3.1.8 style-loader@0.23.0 css-loader@1.0.0 babel-loader@8.0.2
 
-    Configure webpack.config.js
+  Configure webpack.config.js
+
+  install react and react-dom:
+      npm i react@16.5.2 react-dom@16.5.2
+
+  Add a react component (something that will render to show everything is working)
+
+  Install react-hot-loader (reloads live page to avoid having to reload in between changes to code)
+    https://github.com/gaearon/react-hot-loader
+
+    npm i react-hot-loader
+
+I added this script to my package.json for starting my webpack server:
+  {
+    "wpserv": "NODE_ENV=development ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+  }
